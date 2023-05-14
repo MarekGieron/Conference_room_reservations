@@ -1,0 +1,18 @@
+# Pliki i katalogi, które mają być pomijane przez Git
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.egg-info
+*.egg
+*.DS_Store
+*.swo
+*.swp
+*.bak
+*.pyc
+*.orig
+*.rej
+*.~*
+*.~*
