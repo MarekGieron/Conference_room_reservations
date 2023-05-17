@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Conference room reservations{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'rooms' %}">Lista sal</a></li>
+                <li><a href="{% url 'new_room' %}">Dodaj salę</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>Autor projektu: Marek Gieroń</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Dodaj nową salę</h2>
+
+{% if error_message %}
+<p style="color: red">{{ error_message }}</p>
+{% endif %}
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label for="name">Nazwa sali:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div>
+    <label for="capacity">Pojemność sali:</label>
+    <input type="number" id="capacity" name="capacity" min="1" required>
+  </div>
+  <div>
+    <input type="checkbox" id="projector_available" name="projector_available">
+    <label for="projector_available">Dostępność rzutnika</label>
+  </div>
+  <button type="submit">Dodaj</button>
+</form>
+{% endblock %}
